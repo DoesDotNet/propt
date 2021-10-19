@@ -5,6 +5,6 @@ resource "azurerm_api_management" "global" {
   publisher_name      = "Propt"
   publisher_email     = "info@propt.me"
 
-  sku_name = "Consumption_1"
+  sku_name = "Consumption_0"
   tags     = local.common_tags
 }
