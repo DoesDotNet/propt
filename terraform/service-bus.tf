@@ -4,5 +4,5 @@ resource "azurerm_servicebus_namespace" "global" {
   resource_group_name = azurerm_resource_group.global.name
   sku                 = "Standard"
 
-  tags = common_tags
+  tags = local.common_tags
 }
