@@ -3,11 +3,11 @@ variable "environment" {
 }
 
 variable "project" {
-  type = string
+  type    = string
   default = "propt"
 }
 
 variable "system" {
-  type = string
+  type    = string
   default = "global"
 }
