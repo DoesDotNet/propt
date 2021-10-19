@@ -1,16 +1,16 @@
 terraform {
- required_providers {
+  required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "2.81.0"
     }
   }
 
   backend "azurerm" {
-    resource_group_name = "propt-tf-test-ukso-rg"
+    resource_group_name  = "propt-tf-test-ukso-rg"
     storage_account_name = "propttftestuksosa"
-    container_name = "terraformstate"
-    key = "propt-global.tfstate"
+    container_name       = "terraformstate"
+    key                  = "propt-global.tfstate"
   }
 }
 
