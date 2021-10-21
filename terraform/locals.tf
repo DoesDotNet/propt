@@ -8,6 +8,8 @@ locals {
   name_prefix = "${var.project}-${var.system}-${var.environment}"
 
   locations = {
-    uksouth = "ukso"
+    "UK South" = "ukso"
+    "UKSouth"  = "ukso"
+    "uksouth"  = "ukso"
   }
 }

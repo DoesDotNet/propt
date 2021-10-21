@@ -1,5 +1,5 @@
 resource "azurerm_servicebus_namespace" "global" {
-  name                = format("propt-global-%s-ukso-sb", var.environment)
+  name                = format("%s-sb-ukso", local.name_prefix)
   location            = azurerm_resource_group.global.location
   resource_group_name = azurerm_resource_group.global.name
   sku                 = "Standard"
