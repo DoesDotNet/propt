@@ -6,6 +6,7 @@ locals {
   }
 
   name_prefix = "${var.project}-${var.system}-${var.environment}"
+  keyvault_name_prefix = "${var.project}${var.system}${var.environment}"
 
   locations = {
     "UK South" = "ukso"

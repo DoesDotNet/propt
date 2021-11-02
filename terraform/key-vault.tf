@@ -1,5 +1,5 @@
 resource "azurerm_key_vault" "global" {
-  name                            = format("%s-kv-ukso", local.name_prefix)
+  name                            = format("%skvukso", local.keyvault_name_prefix)
   location                        = azurerm_resource_group.global.location
   resource_group_name             = azurerm_resource_group.global.name
   enabled_for_disk_encryption     = true
