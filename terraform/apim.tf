@@ -25,6 +25,7 @@ resource "azurerm_api_management_product" "web-api" {
   product_id            = "web-api"
   api_management_name   = azurerm_api_management.global.name
   resource_group_name   = azurerm_resource_group.global.name
+  description           = "API for web app"
   display_name          = "Web API"
   subscription_required = false
   approval_required     = false
