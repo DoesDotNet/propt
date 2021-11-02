@@ -26,6 +26,13 @@ resource "azurerm_key_vault" "global" {
     storage_permissions = [
       "Get",
     ]
+
+    certificate_permissions = [
+      "Get",
+      "Create",
+      "Delete",
+      "Update"
+    ]
   }
 
   tags = local.common_tags
