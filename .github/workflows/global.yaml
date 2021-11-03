@@ -5,9 +5,7 @@ on:
     branches: [main]
   
   workflow_dispatch:
-    
-env:
-  DOESDOTNET_ORGANISATION: 'DoesDotNet'
+
 jobs:
   terraform-test:
     name: 'Terraform - Test'
@@ -51,14 +49,6 @@ jobs:
       - name: Terraform Apply
         id: Apply
         run: terraform apply -no-color -auto-approve -input=false tfplan
-
-      - uses: gliech/create-github-secret-action@v1
-        with:
-          location: ${{ env.DOESDOTNET_ORGANISATION }}
-          name: NUCLEAR_LAUNCH_CODES
-          value: '00000000'
-          org_visibility: all
-          pa_token: ${{ secrets.GITHUB_TOKEN }}
 
   terraform-live:
     name: 'Terraform - Live'

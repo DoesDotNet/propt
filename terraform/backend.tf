@@ -4,6 +4,11 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "2.81.0"
     }
+
+    github = {
+      source  = "integrations/github"
+      version = "~> 4.0"
+    }
   }
 
   backend "azurerm" {
@@ -18,6 +23,9 @@ provider "azurerm" {
   features {}
 }
 
+provider "github" {
+  owner = var.gh-organisation
+}
 
 data "azurerm_client_config" "current" {
 }

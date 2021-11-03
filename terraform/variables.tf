@@ -11,3 +11,8 @@ variable "system" {
   type    = string
   default = "global"
 }
+
+variable "gh-organisation" {
+  type    = string
+  default = "DoesDotNet"
+}
