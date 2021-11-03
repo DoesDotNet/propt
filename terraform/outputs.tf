@@ -11,7 +11,7 @@ output "log_analytics_name" {
 }
 
 output "log_analytics_key" {
-  value = azurerm_log_analytics_workspace.global.primary_shared_key
+  value     = azurerm_log_analytics_workspace.global.primary_shared_key
   sensitive = true
 }
 
@@ -20,11 +20,11 @@ output "apim_name" {
 }
 
 output "global_resource_group_name" {
-    value = azurerm_resource_group.global.name
+  value = azurerm_resource_group.global.name
 }
 
 output "global_resource_group_location" {
-    value = azurerm_resource_group.global.location
+  value = azurerm_resource_group.global.location
 }
 
 output "servicebus_name" {
@@ -32,5 +32,5 @@ output "servicebus_name" {
 }
 
 output "app_configuration_name" {
-    value = azurerm_app_configuration.global.name
+  value = azurerm_app_configuration.global.name
 }
