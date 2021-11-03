@@ -12,6 +12,7 @@ output "log_analytics_name" {
 
 output "log_analytics_key" {
   value = azurerm_log_analytics_workspace.global.primary_shared_key
+  sensitive = true
 }
 
 output "apim_name" {
