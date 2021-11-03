@@ -25,6 +25,7 @@ provider "azurerm" {
 
 provider "github" {
   owner = var.gh-organisation
+  token = var.gh-token
 }
 
 data "azurerm_client_config" "current" {

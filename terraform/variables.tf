@@ -16,3 +16,7 @@ variable "gh-organisation" {
   type    = string
   default = "DoesDotNet"
 }
+
+variable "gh-token" {
+  type = string
+}
