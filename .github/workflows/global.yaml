@@ -6,6 +6,9 @@ on:
   
   workflow_dispatch:
 
+env:
+  PROPT_PAT: ${{ secrets.PROPT_PAT }}
+
 jobs:
   terraform-test:
     name: 'Terraform - Test'
@@ -44,7 +47,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -var environment="test" -var gh-token=${{ secrets.GITHUB_TOKEN }} -no-color -out tfplan
+        run: terraform plan -var environment="test" -var gh-token=${{ env.PROPT_PAT }} -no-color -out tfplan
 
       - name: Terraform Apply
         id: Apply
@@ -86,7 +89,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -var environment="live" -var gh-token=${{ secrets.GITHUB_TOKEN }} -no-color -out tfplan
+        run: terraform plan -var environment="live" -var gh-token=${{ env.PROPT_PAT }} -no-color -out tfplan
 
       - name: Terraform Apply
         id: Apply
